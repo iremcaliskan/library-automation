@@ -1,0 +1,112 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" sizes="16x16" href="~/Content/img/estulogomuz.jpg">
+    <title>Giriş Sayfası</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- animation CSS -->
+    <link href="~/Content/css/animate.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link href="~/Content/css/style.css" rel="stylesheet" />
+    <!-- color CSS -->
+    <link href="~/Content/css/blue.css" rel="stylesheet" />
+    <!-- Sweet Alert CSS -->
+    <link href="~/Content/css/sweetalert2.min.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="cssload-speeding-wheel"></div>
+    </div>
+    <section id="wrapper" class="login-register">
+        <div class="login-box">
+            <div class="white-box">
+                <form class="form-horizontal form-material" id="loginform" action="index.html">
+                    <h3 class="box-title m-b-20">Giriş Yap</h3>
+
+                    <div class="form-group ">
+                        <div class="col-xs-12">
+                            <input id="email" class="form-control" type="text" placeholder="Mail Giriniz">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <input id="sifre" class="form-control" type="password" placeholder="Şifre Giriniz">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <div class="checkbox checkbox-primary pull-left p-t-0">
+                                <input id="checkbox-signup" type="checkbox">
+                                <label for="checkbox-signup"> Beni Hatırla </label>
+                            </div>
+                            @*<a href="javascript:void(0)" id="to-recover" class="text-dark pull-right"><i class="fa fa-lock m-r-5"></i>Şifremi Unuttum?</a>*@
+                        </div>
+                    </div>
+
+                    <div class="form-group text-center m-t-20">
+                        <div class="col-xs-12">
+                            <button id="girisYap" class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" type="button">Giriş Yap</button>
+                        </div>
+                    </div>
+                </form>
+
+                @*<form class="form-horizontal" id="recoverform" action="index.html">
+
+                    <div class="form-group ">
+                        <div class="col-xs-12">
+                            <h3>Şifre Sıfırla</h3>
+                            <p class="text-muted">Gerekli bilgiler mailinize gönderilecektir! </p>
+                        </div>
+                    </div>
+
+                    <div class="form-group ">
+                        <div class="col-xs-12">
+                            <input id="uyeMail" class="form-control" type="text" placeholder="Mail Giriniz">
+                        </div>
+                    </div>
+
+                    <div class="form-group text-center m-t-20">
+                        <div class="col-xs-12">
+                            <button id="sifirla" class="btn btn-primary btn-lg btn-block text-uppercase waves-effect waves-light" type="button">Sıfırla</button>
+                        </div>
+                    </div>
+
+                </form>*@
+            </div>
+        </div>
+    </section>
+    <!-- jQuery -->
+    <script src="~/Scripts/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <!-- Menu Plugin JavaScript -->
+    <script src="~/Scripts/sidebar-nav.min.js"></script>
+    <!--slimscroll JavaScript -->
+    <script src="~/Scripts/jquery.slimscroll.js"></script>
+    <!--Wave Effects -->
+    <script src="~/Scripts/waves.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="~/Scripts/custom.js"></script>
+    <!--Style Switcher -->
+    <script src="~/Scripts/jQuery.style.switcher.js"></script>
+    <!--Sweet Alert -->
+    <script src="~/Scripts/sweetalert2.min.js"></script>
+    <!--My Scripts-->
+    <script src="~/Scripts/GirisYap.js"></script>
+</body>
+</html>
+

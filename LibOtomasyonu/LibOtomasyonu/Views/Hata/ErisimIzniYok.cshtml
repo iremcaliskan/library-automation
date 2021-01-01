@@ -1,0 +1,48 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" sizes="16x16" href="~/Content/img/estulogomuz.jpg">
+    <title>403 Forbidden</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- animation CSS -->
+    <link href="~/Content/css/animate.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link href="~/Content/css/style.css" rel="stylesheet" />
+    <!-- color CSS -->
+    <link href="~/Content/css/blue.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="cssload-speeding-wheel"></div>
+    </div>
+    <section id="wrapper" class="error-page">
+        <div class="error-box">
+            <div class="error-body text-center">
+                <h1>403</h1>
+                <h3 class="text-uppercase">Forbidden</h3>
+                <p class="text-muted m-t-30 m-b-30 text-uppercase">Acces to this resource on the server is denied!</p>
+                <a href="@Url.Action("Index", "Kitap")" class="btn btn-info btn-rounded waves-effect waves-light m-b-40">Back to home</a>
+            </div>
+            <footer class="footer text-center">2020 © İrem Çalışkan</footer>
+        </div>
+    </section>
+    <!-- jQuery -->
+    <script src="~/Scripts/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="~/Scripts/custom.js"></script>
+</body>
+</html>

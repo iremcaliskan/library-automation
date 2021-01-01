@@ -1,0 +1,7 @@
+﻿Generic RepositoryPattern: Veri tabanına veri ekleme, silme, güncelleme ve okuma gibi işlemler için kullanılan,
+kodların tekrar kullanılabilirliğini sağlayan, veriye erişimin ve yönetimin tek noktaya indirilmesini sağlayan 
+bir tasarım desenidir.
+
+Generic UnitOfWorkPattern: Veri tabanı ile yapılacak tüm işlemleritek bir kanal aracılığı ile gerçekleştirme ve
+hafızada tutma işlemleri için kullanılan desendir. Repository patterni ile uygulanır. İşlemlerin toplu halde
+gerçekleştirilmesi ve hata durumunda geri alınabilmesi sağlanır.

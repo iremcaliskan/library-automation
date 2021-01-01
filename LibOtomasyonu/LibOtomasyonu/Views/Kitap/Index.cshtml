@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewBag.Title = "Kitaplar";
+}
+
+<!-- Kitap yolu ve modeli -->
+@using LibOtomasyonu.Data.Model
+@model List<Kitap>
+
+
+<h2>KİTAPLAR</h2>
+<!-- html kodu: https://datatables.net/examples/api/multi_filter.html-->
+<table id="example" class="display" style="width:100%">
+    <thead>
+        <tr>
+            <th>Sıra No</th>
+            <th>Kategori</th>
+            <th>Kitap Adı</th>
+            <th>Adet</th>
+            <th>Yazar</th>
+            <th>Güncelle</th>
+            <th>Sil</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var kitap in Model)
+        {
+            string kategoriler = "";
+        <tr>
+            <td>@kitap.SiraNo</td>
+            <td>
+                @foreach (var kategori in kitap.Kategoriler) {
+                    kategoriler += kategori.Ad + ","; 
+                }
+                @kategoriler
+            </td>
+            <td>@kitap.Ad</td>
+            <td>@kitap.Adet</td>
+            <td>@kitap.Yazar.Ad</td>
+            <td><a href="@Url.Action("Guncelle", "Kitap", new { kitapId= kitap.Id })" class="ktpGuncelle btn btn-custom">Güncelle</a></td>
+            <td><button class="ktpSil btn btn-danger" value="@kitap.Id">Sil</button></td>
+        </tr>
+        }
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <th>Sıra No</th>
+            <th>Kategori</th>
+            <th>Kitap Adı</th>
+            <th>Adet</th>
+            <th>Yazar</th>
+            <th>Güncelle</th>
+            <th>Sil</th>
+        </tr>
+    </tfoot>
+</table>
+

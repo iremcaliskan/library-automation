@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "Üyelik";
+}
+
+<!-- Kategori yolu ve modeli -->
+@using LibOtomasyonu.Data.Model
+@model List<Uye>
+
+
+<h2>ÜYELİK</h2>
+<a href="@Url.Action("Ekle", "Uyelik")" class="btn btn-success" style="margin-bottom:15px;">Ekle</a>
+<!-- html kodu: https://datatables.net/examples/api/multi_filter.html-->
+<table id="example" class="display" style="width:100%">
+    <thead>
+        <tr>
+            <th>Ad Soyad</th>
+            <th>Mail</th>
+            <th>Yetki</th>
+            <th>Güncelle</th>
+            <th>Sil</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var uye in Model)
+        {
+            <tr>
+                <td>@uye.Ad @uye.Soyad</td>
+                <td>@uye.Mail</td>                
+                <td>
+                    @if (uye.Yetki == "1")
+                    {
+                        <button id="yetkiAta" data-id="@uye.Id" class="btn btn-success">Admin</button>
+                    }
+                    else if (uye.Yetki == "2")
+                    {
+                        <button id="yetkiAta" data-id="@uye.Id" class="btn btn-success">Moderatör</button>
+                    }
+                    else
+                    {
+                        <button id="yetkiAta" data-id="@uye.Id" class="btn btn-success">İzleyici</button>
+                    }
+                </td>
+                <td><a href="@Url.Action("Guncelle", "Uyelik", new { uyeId = uye.Id })" class="btn btn-custom">Güncelle</a></td>
+                <td><button class="uyelikSil btn btn-danger" value="@uye.Id">Sil</button></td>
+            </tr>
+        }
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <th>Ad Soyad</th>
+            <th>Mail</th>
+            <th>Yetki</th>
+            <th>Güncelle</th>
+            <th>Sil</th>
+        </tr>
+    </tfoot>
+</table>
+

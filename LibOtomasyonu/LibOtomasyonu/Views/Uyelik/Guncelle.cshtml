@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "Üyelik Güncelle";
+}
+@using LibOtomasyonu.Data.Model
+@model Uye
+
+<h2>ÜYELİK GÜNCELLE</h2>
+
+<form class="form-horizontal">
+
+    <div class="form-group">
+        <label class="col-md-12">Ad Soyad</label>
+        <div class="col-md-12">
+            <span>@Model.Ad @Model.Soyad</span>
+        </div>
+    </div>
+
+    <input type="hidden" id="uyeId" value="@Model.Id" />
+
+    <div class="form-group">
+        <label class="col-md-12">Mail</label>
+        <div class="col-md-12">
+            <input id="mail" type="text" value="@Model.Mail"  class="form-control" placeholder="Mail giriniz.">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-12">Şifre</label>
+        <div class="col-md-12">
+            <input id="parola" type="password" class="form-control" placeholder="Şifre giriniz.">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-12">Şifre(Tekrar)</label>
+        <div class="col-md-12">
+            <input id="parolaTekrar" type="password" class="form-control" placeholder="Şifreyi tekrar giriniz.">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-12">
+            <input type="button" id="uyelikGuncelle" class="btn btn-block btn-info" value="Kaydet" />
+        </div>
+    </div>
+</form>
+
+

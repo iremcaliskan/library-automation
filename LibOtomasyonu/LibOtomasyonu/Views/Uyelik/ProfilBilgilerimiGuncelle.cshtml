@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "Profil Bilgilerim";
+}
+
+@using LibOtomasyonu.Data.Model
+@model Uye
+
+<h2>PROFİL BİLGİLERİM</h2>
+
+<form class="form-horizontal">
+
+    <div class="form-group">
+        <label class="col-md-12">Ad Soyad</label>
+        <div class="col-md-12">
+            <span>@Model.Ad @Model.Soyad</span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-12">Mail</label>
+        <div class="col-md-12">
+            <span>@Model.Mail</span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-12">Telefon</label>
+        <div class="col-md-12">
+            <input id="tel" type="tel" value="@Model.Tel" class="form-control" placeholder="Telefon Numarası giriniz.">
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label class="col-md-12">Şifre</label>
+        <div class="col-md-12">
+            <input id="parola" type="password" class="form-control" placeholder="Şifre giriniz.">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-12">Şifre(Tekrar)</label>
+        <div class="col-md-12">
+            <input id="parolaTekrar" type="password" class="form-control" placeholder="Şifreyi tekrar giriniz.">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-12">
+            <input type="button" id="profilBilgiGuncelle" class="btn btn-block btn-info" value="Güncelle" />
+        </div>
+    </div>
+</form>
+
+

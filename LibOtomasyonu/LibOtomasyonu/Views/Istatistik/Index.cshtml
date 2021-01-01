@@ -1,0 +1,98 @@
+﻿
+@{
+    ViewBag.Title = "İstatistikler";
+}
+
+<h2>İstatistikler</h2>
+<!-- row -->
+<div class="row">
+    <div class="col-lg-3 col-sm-3 col-xs-12">
+        <div class="white-box analytics-info">
+            <h3 class="box-title">Kategori Sayısı</h3>
+            <ul class="list-inline two-part">
+                <li>
+                    <div class="sparklinedash"></div>
+                </li>
+                <li class="text-right"><i class="text-success"></i> <span class="counter text-success">@ViewBag.KategoriSayisi</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-sm-3 col-xs-12">
+        <div class="white-box analytics-info">
+            <h3 class="box-title">Yazar Sayısı</h3>
+            <ul class="list-inline two-part">
+                <li>
+                    <div class="sparklinedash2"></div>
+                </li>
+                <li class="text-right"><i class="text-purple"></i> <span class="counter text-purple">@ViewBag.YazarSayisi</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-sm-3 col-xs-12">
+        <div class="white-box analytics-info">
+            <h3 class="box-title">Kitap Sayısı</h3>
+            <ul class="list-inline two-part">
+                <li>
+                    <div class="sparklinedash3"></div>
+                </li>
+                <li class="text-right"><i class="text-info"></i> <span class="counter text-info">@ViewBag.KitapSayisi</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-lg-3 col-sm-3 col-xs-12">
+        <div class="white-box analytics-info">
+            <h3 class="box-title">Ödünç Alınan Kitap Sayısı</h3>
+            <ul class="list-inline two-part">
+                <li>
+                    <div class="sparklinedash4"></div>
+                </li>
+                <li class="text-right"><i class="text-danger"></i> <span class="text-danger">@ViewBag.TeslimEdilenKitapSayisi</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-4 col-sm-3 col-xs-12">
+        <div class="white-box analytics-info">
+            <h3 class="box-title">Teslim Alınan Kitap Sayısı</h3>
+            <ul class="list-inline two-part">
+                <li>
+                    <div class="sparklinedash"></div>
+                </li>
+                <li class="text-right"><i class="text-success"></i> <span class="counter text-success">@ViewBag.TeslimAlinanKitapSayisi</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-sm-3 col-xs-12">
+        <div class="white-box analytics-info">
+            <h3 class="box-title">Son Haftanın Ödünç Kitap Sayısı</h3>
+            <ul class="list-inline two-part">
+                <li>
+                    <div class="sparklinedash2"></div>
+                </li>
+                <li class="text-right"><i class="text-purple"></i> <span class="counter text-purple">@ViewBag.SonHaftaTeslimEdilenKitapSayisi</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-sm-3 col-xs-12">
+        <div class="white-box analytics-info">
+            <h3 class="box-title">Son Haftanın Teslim Alınan Kitap Sayısı</h3>
+            <ul class="list-inline two-part">
+                <li>
+                    <div class="sparklinedash3"></div>
+                </li>
+                <li class="text-right"><i class="text-info"></i> <span class="counter text-info">@ViewBag.SonHaftaTeslimAlinanKitapSayisi</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+@section script{
+    <script src="~/Scripts/jquery.charts-sparkline.js"></script>
+}
+

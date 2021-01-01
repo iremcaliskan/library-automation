@@ -1,0 +1,110 @@
+﻿
+@{
+    ViewBag.Title = "Kitap Güncelle";
+    int sayac = 0;
+}
+
+@using LibOtomasyonu.Data.Model
+@model Kitap
+
+<h2>KİTAP GÜNCELLE</h2>
+
+<form class="form-horizontal">
+    <div class="form-group">
+        <label class="col-sm-12">Kategori Ekle</label>
+        <div class="col-sm-10">
+            <select id="kategoriler" class="form-control">
+                <!-- Kategoriler içerisinde tüm kategorileri çektim,
+                    Ve içerisini döndüm, diğer foreach ile de Kitap'a ait kategoriler içerisinde döndüm,
+                    eklenen kategori tüm kategoriler içerisinde var ise çıkarılıyor,
+                    id'ler eşit değilse sayaç ile if else kontrolü sağlanıyor.
+                    Id'ler eşit olunca kategori adı selectin içerisine eklenmiş oluyor.
+                    Break komutu ile de döngüden çıkılıyor.
+                    -->
+                @foreach (var kategori in ViewBag.Kategoriler)
+                {
+                    sayac = 0;
+                    foreach (var eklenmisKategori in Model.Kategoriler)
+                    {
+                        if (kategori.Id != eklenmisKategori.Id)
+                        {
+                            if (sayac < Model.Kategoriler.Count - 1)
+                            {
+                                sayac++;
+                            }
+                            else
+                            {
+                                <option data-id="@kategori.Id">@kategori.Ad</option>
+                                break;
+                            }
+                        }
+                        else
+                        {
+                            break;
+                        }
+                    }
+                }
+            </select>
+        </div>
+
+        <div class="col-sm-2">
+            <input type="button" id="kategoriEkle" class="btn btn-block btn-info" value="Ekle" />
+        </div>
+
+        <div id="eklenenKategoriler" class="form-group">
+            <label class="col-md-12">Kategoriler</label>
+            @foreach (var kategori in Model.Kategoriler)
+            {
+                <div id="@kategori.Id" class="col-md-1 bg-primary kategoriSil" style="margin-right:2px; margin-bottom:2px;">@kategori.Ad</div>
+            }
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-12">Yazar Ekle</label>
+        <div class="col-sm-12">
+            <select id="yazar" class="form-control">
+                @foreach (var yazar in ViewBag.Yazarlar)
+                {
+                    <!-- Güncellenecek kitabın seçili yazarının gelmesi için, başta gelmesi için-->
+                    if (Model.Yazar.Id == yazar.Id)
+                    {
+                        <option data-id="@yazar.Id" selected>@yazar.Ad</option>
+                    }
+                    else
+                    {
+                        <option data-id="@yazar.Id">@yazar.Ad</option>
+                    }
+                }
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-12">Kitap Adı</label>
+        <div class="col-md-12">
+            <input type="text" id="kitapAd" value="@Model.Ad" class="form-control" placeholder="Kitap adını giriniz.">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-12">Kitap Adeti</label>
+        <div class="col-md-12">
+            <input type="text" id="kitapAdet" value="@Model.Adet" class="form-control" placeholder="Kitap adetini giriniz.">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-12">Sıra No</label>
+        <div class="col-md-12">
+            <input type="text" id="siraNo" value="@Model.SiraNo" class="form-control" placeholder="Kitap sıra numarasını giriniz.">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-12">
+            <input type="button" id="kitapGuncelle" data-id="@Model.Id" class="btn btn-block btn-info" value="Güncelle" />
+        </div>
+    </div>
+</form>
+
+

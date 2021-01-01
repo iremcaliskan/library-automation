@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "Teslim Edilen Kitaplar";
+    DateTime getirdigiTarih;
+}
+
+<!-- Kitap yolu ve modeli -->
+@using LibOtomasyonu.Data.Model
+@model List<OduncKitap>
+
+
+<h2>TESLİM EDİLEN KİTAPLAR</h2>
+
+<table id="example" class="display" style="width:100%">
+    <thead>
+        <tr>
+            <th>Kitap Adı</th>
+            <th>Kitabı Alan Üye</th>
+            <th>Aldığı Tarih</th>
+            <th>Getireceği Tarih</th>
+            <th>Getirdiği Tarih</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var oduncKitap in Model)
+        {
+            getirdigiTarih = Convert.ToDateTime(oduncKitap.GetirdigiTarih);
+        <tr>
+            <td>@oduncKitap.Kitap.Ad</td>
+            <td>@oduncKitap.Uye.Ad</td>
+            <td>@oduncKitap.AlisTarihi.ToString("dddd, dd MMMM yyyy")</td>
+            <td>@oduncKitap.GetirecegiTarihi.ToString("dddd, dd MMMM yyyy")</td>
+            <td>@getirdigiTarih.ToString("dddd, dd MMMM yyyy")</td>
+        </tr>
+        }
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <th>Kitap Adı</th>
+            <th>Kitabı Alan Üye</th>
+            <th>Aldığı Tarih</th>
+            <th>Getireceği Tarih</th>
+            <th>Getirdiği Tarih</th>
+        </tr>
+    </tfoot>
+</table>
+

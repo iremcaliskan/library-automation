@@ -1,0 +1,6 @@
+C:\Users\ASUS\source\repos\LibOtomasyonu.Data.Model\bin\Debug\LibOtomasyonu.Data.Model.dll
+C:\Users\ASUS\source\repos\LibOtomasyonu.Data.Model\bin\Debug\LibOtomasyonu.Data.Model.pdb
+C:\Users\ASUS\source\repos\LibOtomasyonu.Data.Model\obj\Debug\LibOtomasyonu.Data.Model.csprojAssemblyReference.cache
+C:\Users\ASUS\source\repos\LibOtomasyonu.Data.Model\obj\Debug\LibOtomasyonu.Data.Model.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\source\repos\LibOtomasyonu.Data.Model\obj\Debug\LibOtomasyonu.Data.Model.dll
+C:\Users\ASUS\source\repos\LibOtomasyonu.Data.Model\obj\Debug\LibOtomasyonu.Data.Model.pdb

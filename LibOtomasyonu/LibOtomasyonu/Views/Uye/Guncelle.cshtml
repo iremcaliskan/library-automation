@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Üye Güncelle";
+}
+@using LibOtomasyonu.Data.Model
+@model Uye
+
+<h2>ÜYE GÜNCELLE</h2>
+
+<form class="form-horizontal">
+
+    <div class="form-group">
+        <label class="col-md-12">Ad</label>
+        <div class="col-md-12">
+            <input type="text" value="@Model.Ad" id="uyeAd" class="form-control" placeholder="Üye adını giriniz.">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-12">Soyad</label>
+        <div class="col-md-12">
+            <input type="text" value="@Model.Soyad" id="uyeSoyad" class="form-control" placeholder="Üye soyadını giriniz.">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-12">Tc</label>
+        <div class="col-md-12">
+            <input type="text" value="@Model.Tc" id="uyeTc" class="form-control" placeholder="Tc'yi giriniz.">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-12">Telefon</label>
+        <div class="col-md-12">
+            <input type="text" value="@Model.Tel" id="uyeTel" class="form-control" placeholder="Telefon numarasını giriniz.">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-12">
+            <input type="button" data-id="@Model.Id" id="uyeGuncelle" class="btn btn-block btn-info" value="Güncelle" />
+        </div>
+    </div>
+</form>
+
+
